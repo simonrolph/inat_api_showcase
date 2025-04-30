@@ -113,6 +113,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
+          git pull
           git add items.yml list_of_items.md
           git commit -m "Update items.yml and list_of_items.md with latest timestamps" || echo "No changes"
           git push
