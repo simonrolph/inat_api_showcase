@@ -162,6 +162,7 @@ jobs:
                   </tbody>
               </table>
               """
+              return html
 
           # Read the template file
           with open('html_template.html', 'r') as f:
