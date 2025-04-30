@@ -8,59 +8,61 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Install dependencies (YAML parser and markdown generation tools)
       - name: Install Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y python3-pip
           pip3 install pyyaml
 
-      # Add a Python script to convert the YAML to Markdown
       - name: Generate markdown file
         run: |
           python3 <<EOF
           import yaml
-          import os
+          from collections import defaultdict
 
           # Load the YAML data from the file
           with open('items.yml', 'r') as file:
               data = yaml.safe_load(file)
 
-          # Function to convert YAML to markdown format
-          def create_markdown_entry(item):
-              markdown = f"### {item['category']}\n\n"
-              for entry in item['items']:
-                  markdown += f"#### {entry['title']} by {', '.join([author['name'] for author in entry['authors']])}\n"
-                  markdown += f"- [Link]({entry['url']})\n"
-                  if 'description' in entry:
-                      markdown += f"  *{entry['description']}*\n"
-                  markdown += f"  [Source code]({entry['source_code']})\n"
-                  if 'tags' in entry:
-                      markdown += f"  *Tags*: {', '.join(entry['tags'])}\n\n"
+          def convert_flat_items_to_markdown(items):
+              grouped = defaultdict(list)
+
+              for item in items:
+                  category = item.get('category', 'Uncategorized')
+                  grouped[category].append(item)
+
+              markdown = "# Toolbox\n\n"
+              for category, entries in grouped.items():
+                  markdown += f"### {category}\n\n"
+                  for entry in entries:
+                      title = entry.get('title', 'Untitled')
+                      authors = ', '.join([a['name'] for a in entry.get('authors', [])])
+                      url = entry.get('url', '#')
+                      markdown += f"#### {title} by {authors}\n"
+                      markdown += f"- [Link]({url})\n"
+                      if 'description' in entry:
+                          markdown += f"  *{entry['description']}*\n"
+                      if 'source_code' in entry:
+                          markdown += f"  [Source code]({entry['source_code']})\n"
+                      if 'tags' in entry:
+                          markdown += f"  *Tags*: {', '.join(entry['tags'])}\n"
+                      markdown += "\n"
               return markdown
 
-          # Starting markdown content
-          readme_content = "# Toolbox\n\n"
+          # Generate and write the markdown
+          markdown = convert_flat_items_to_markdown(data['items'])
 
-          # Iterate through the categories and items
-          for category in data['items']:
-              readme_content += create_markdown_entry(category)
-
-          # Write the generated markdown to README.md
           with open('list_of_items.md', 'w') as readme_file:
-              readme_file.write(readme_content)
-
+              readme_file.write(markdown)
           EOF
 
-      # Commit and push the updated README.md
       - name: Commit updated list_of_items.md
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Actions"
-          git add README.md
-          git commit -m "Update README.md from YAML data"
+          git add list_of_items.md
+          git commit -m "Update list_of_items.md from YAML data" || echo "No changes to commit"
           git push
