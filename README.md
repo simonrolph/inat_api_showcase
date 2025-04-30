@@ -33,12 +33,17 @@ Tools to assist decision-making processes such as where to go, what to record or
  * [Easily Missed](https://simonrolph.github.io/easily_missed/) by [Simon Rolph
 ](https://github.com/simonrolph) - "Easily Missed" is a tool to help iNaturalist observers identify local gaps in species records. It make suggestions of what species you should submit observations of to iNaturalist. [Source code](https://github.com/simonrolph/easily_missed)
  * [Local Experts](https://simonrolph.github.io/inat_experts/) by [Simon Rolph
-](https://github.com/simonrolph) - Finds your local iNaturalist experts and gives you recommendations on what you could observe in the area. [Source code](https://github.com/simonrolph/inat_experts) 
+](https://github.com/simonrolph) - Finds your local iNaturalist experts and gives you recommendations on what you could observe in the area. [Source code](https://github.com/simonrolph/inat_experts)
+ * [Birds in Your Area](https://github.com/jmevangelist/birds-in-your-area) by [jmevangelist](https://github.com/jmevangelist) – Find bird species seen in a specified area using iNaturalist data.
+ * [Plan Your Expedition](https://github.com/capsellabursa/PlanYourExpedition) by [capsellabursa](https://github.com/capsellabursa) – A planning tool using iNaturalist data for field expeditions.
+ * [Rarest Critter Webapp](https://github.com/m3lmark/rarest_critter_webapp) by [m3lmark](https://github.com/m3lmark) – A tool for finding rare species using iNaturalist data.
 
-### Data visualistion
+### Exploring and data visualistion
 
  * [iNaturalist Live](https://github.com/simonrolph/inatcounter) by [Simon Rolph
 ](https://github.com/simonrolph) - Live visualisation of iNaturalist observations and identifications. [Source code](https://github.com/simonrolph/inatcounter)
+ * [WildCounts](https://github.com/mjon/WildCounts) by [mjon](https://github.com/mjon) – Explore biodiversity data and species counts from iNaturalist.
+ * [Nature Gram](https://github.com/jmevangelist/nature-gram) by [jmevangelist](https://github.com/jmevangelist) - Endless scroll of inaturalist observations
 
 ### Utilities and data processing
 
@@ -47,23 +52,15 @@ Generally helpful things such as tools to assist the generation, processing or a
  * [iNaturalist Enhancement Suite](https://chromewebstore.google.com/detail/inaturalist-enhancement-s/hdnjehcihcpjphgbkagjobenejgldnah) by Eric Johnson - Chrome extension that adds functionality to iNaturalist
  * [Dronefly](https://github.com/dronefly-garden/dronefly) by the iNaturalist Discord Community - Dronefly is a bot for naturalists that gives users access to iNaturalist on Discord chat. Dronefly was made by and for members of the iNaturalist Discord server.
  * [Stir fry](https://github.com/jumear/stirfry) by [Jumear](https://github.com/jumear) - Miscellaneous web-based tools for iNaturalist power users
+ * [LR iNaturalist Publish](https://github.com/rcloran/lr-inaturalist-publish) by [rcloran](https://github.com/rcloran) - A Lightroom plugin to publish directly to iNaturalist.
+ * [iNat Upload Utils](https://github.com/SamGartrell/inat-upload-utils) by [SamGartrell](https://github.com/SamGartrell) - Tools to assist iNaturalist users with georeferencing photos from digital cameras, and provides preliminary ID using the iNaturalist computer vision model
+ * [iNaturalist Push Notifications](https://github.com/unaschneck/intaturalist-push-notifications) by [unaschneck](https://github.com/unaschneck) – Push notification service for new observations or identifications.
+ * [Kildor's iNat Tools](https://kildor.name/inat/) by [Kildor](https://github.com/kildor) – Various tools and scripts for interacting with iNaturalist data.
+ * [iNat Trails](https://github.com/joergmlpts/iNat-trails) by [joergmlpts](https://github.com/joergmlpts) – This utility reads the route of a hike and generates a table of iNaturalist observations along the way.
 
 ### Other
 
 Anything else that doesn't fit in the above categories
 
  * [Field Notes](https://ifieldnotes.org/). A website for writing field notes to accompany iNaturalist observations.
-
-### Unsorted
-
- * https://github.com/joergmlpts/iNat-trails
- * https://github.com/rcloran/lr-inaturalist-publish
- * https://github.com/ternandsparrow/wild-orchid-watch-pwa
- * https://github.com/SamGartrell/inat-upload-utils
- * https://github.com/jmevangelist/birds-in-your-area
- * https://github.com/jmevangelist/nature-gram
- * https://github.com/m3lmark/rarest_critter_webapp
- * https://github.com/mjon/WildCounts
- * https://github.com/capsellabursa/PlanYourExpedition
- * https://github.com/unaschneck/intaturalist-push-notifications
- * https://kildor.name/inat/
+ * [Wild Orchid Watch PWA](https://github.com/ternandsparrow/wild-orchid-watch-pwa) by [ternandsparrow](https://github.com/ternandsparrow) – A progressive web app for the Wild Orchid Watch project.
