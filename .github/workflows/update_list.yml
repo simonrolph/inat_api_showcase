@@ -158,7 +158,7 @@ jobs:
                       <td>{category}</td>
                   </tr>
               """
-                        html += """
+              html += """
                   </tbody>
               </table>
               """
