@@ -1,4 +1,4 @@
-name: Update README from YAML
+name: Update list_of_items.md from YAML
 
 on:
   workflow_dispatch:
@@ -20,14 +20,14 @@ jobs:
           pip3 install pyyaml
 
       # Add a Python script to convert the YAML to Markdown
-      - name: Generate README
+      - name: Generate markdown file
         run: |
           python3 <<EOF
           import yaml
           import os
 
           # Load the YAML data from the file
-          with open('data.yml', 'r') as file:
+          with open('items.yml', 'r') as file:
               data = yaml.safe_load(file)
 
           # Function to convert YAML to markdown format
@@ -51,13 +51,13 @@ jobs:
               readme_content += create_markdown_entry(category)
 
           # Write the generated markdown to README.md
-          with open('LIST.md', 'w') as readme_file:
+          with open('list_of_items.md', 'w') as readme_file:
               readme_file.write(readme_content)
 
           EOF
 
       # Commit and push the updated README.md
-      - name: Commit updated LIST
+      - name: Commit updated list_of_items.md
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Actions"
