@@ -6,7 +6,7 @@ items:
     profile: https://github.com/frewsxcv
   description: Flashcard web app for naturalists powered by iNaturalist. You are shown
     an image of a species and then can reveal the identification. Configurable to
-    regions and iconic taxa.
+    regions and iconic taxa
   source_code: https://github.com/frewsxcv/learnthe.land
   category: Learning
   last_updated: '2022-04-17'
@@ -17,7 +17,7 @@ items:
     profile: https://bsky.app/profile/meltknuckles.bsky.social
   description: An identification practice tool for wildlife. Challenge yourself to
     identify the things found in nature, and take a guess from the kingdom down to
-    the species.
+    the species
   category: Learning
 - title: iNatGuessr
   url: https://simonrolph.github.io/iNatGuessr/
@@ -25,7 +25,7 @@ items:
   - name: Simon Rolph
     profile: https://github.com/simonrolph
   description: A Guessr-style game based on iNaturalist images. Guess where they're
-    from and reveal the location.
+    from and reveal the location
   source_code: https://github.com/simonrolph/inatguessr
   category: Games
   last_updated: '2024-07-09'
@@ -33,7 +33,7 @@ items:
   url: https://www.bioguessr.com/
   authors:
   - name: jtklein
-  description: A quiz game showing a photo with four family name options.
+  description: A quiz game showing a photo with four family name options
   category: Games
 - title: Easily Missed
   url: https://simonrolph.github.io/easily_missed/
@@ -41,7 +41,7 @@ items:
   - name: Simon Rolph
     profile: https://github.com/simonrolph
   description: Tool to help identify local gaps in species records and suggest what
-    to observe.
+    to observe
   source_code: https://github.com/simonrolph/easily_missed
   category: Decision support tools
   last_updated: '2023-10-09'
@@ -50,7 +50,7 @@ items:
   authors:
   - name: Simon Rolph
     profile: https://github.com/simonrolph
-  description: Finds local iNaturalist experts and gives you species recommendations.
+  description: Finds local iNaturalist experts and gives you species recommendations
   source_code: https://github.com/simonrolph/inat_experts
   category: Decision support tools
   last_updated: '2025-04-24'
@@ -59,7 +59,7 @@ items:
   authors:
   - name: jmevangelist
     profile: https://github.com/jmevangelist
-  description: Find bird species seen in a specified area using iNaturalist data.
+  description: Find bird species seen in a specified area using iNaturalist data
   source_code: https://github.com/jmevangelist/birds-in-your-area
   category: Decision support tools
   last_updated: '2023-06-23'
@@ -68,7 +68,7 @@ items:
   authors:
   - name: capsellabursa
     profile: https://github.com/capsellabursa
-  description: A planning tool using iNaturalist data for field expeditions.
+  description: A planning tool using iNaturalist data for field expeditions
   source_code: https://github.com/capsellabursa/PlanYourExpedition
   category: Decision support tools
   last_updated: '2021-01-30'
@@ -77,7 +77,7 @@ items:
   authors:
   - name: m3lmark
     profile: https://github.com/m3lmark
-  description: A tool for finding rare species using iNaturalist data.
+  description: A tool for finding rare species using iNaturalist data
   source_code: https://github.com/m3lmark/rarest_critter_webapp
   category: Decision support tools
   last_updated: '2025-03-31'
@@ -86,7 +86,7 @@ items:
   authors:
   - name: Natalie Downe
   - name: Simon Willison
-  description: Helps you find places to go tidepooling and figure out the best times.
+  description: Helps you find places to go tidepooling and figure out the best times
   source_code: https://github.com/natbat/rockybeaches
   category: Decision support tools
   last_updated: '2025-04-27'
@@ -95,7 +95,7 @@ items:
   authors:
   - name: Simon Rolph
     profile: https://github.com/simonrolph
-  description: Live visualisation of iNaturalist observations and identifications.
+  description: Live visualisation of iNaturalist observations and identifications
   source_code: https://github.com/simonrolph/inatcounter
   category: Exploring and data visualisation
   last_updated: '2024-12-19'
@@ -104,7 +104,7 @@ items:
   authors:
   - name: jmevangelist
     profile: https://github.com/jmevangelist
-  description: Endless scroll of iNaturalist observations.
+  description: Endless scroll of iNaturalist observations
   source_code: https://github.com/jmevangelist/nature-gram
   category: Exploring and data visualisation
   last_updated: '2023-12-10'
@@ -113,7 +113,7 @@ items:
   authors:
   - name: Natalie Downe
   - name: Simon Willison
-  description: A website that tells you where your nearest owls are!
+  description: A website that tells you where your nearest owls are
   source_code: https://github.com/simonw/owlsnearme
   category: Exploring and data visualisation
   last_updated: '2018-04-28'
@@ -121,13 +121,13 @@ items:
   url: https://chromewebstore.google.com/detail/inaturalist-enhancement-s/hdnjehcihcpjphgbkagjobenejgldnah
   authors:
   - name: Eric Johnson
-  description: Chrome extension that adds functionality to iNaturalist.
+  description: Chrome extension that adds functionality to iNaturalist
   category: Utilities and data processing
 - title: Dronefly
   url: null
   authors:
   - name: iNaturalist Discord Community
-  description: A bot that gives users access to iNaturalist on Discord chat.
+  description: A bot that gives users access to iNaturalist on Discord chat
   source_code: https://github.com/dronefly-garden/dronefly
   category: Utilities and data processing
   last_updated: '2025-04-15'
@@ -136,7 +136,7 @@ items:
   authors:
   - name: Jumear
     profile: https://github.com/jumear
-  description: Miscellaneous web-based tools for iNaturalist power users.
+  description: Miscellaneous web-based tools for iNaturalist power users
   source_code: https://github.com/jumear/stirfry
   category: Utilities and data processing
   last_updated: '2025-01-11'
@@ -145,7 +145,7 @@ items:
   authors:
   - name: rcloran
     profile: https://github.com/rcloran
-  description: A Lightroom plugin to publish directly to iNaturalist.
+  description: A Lightroom plugin to publish directly to iNaturalist
   source_code: https://github.com/rcloran/lr-inaturalist-publish
   category: Utilities and data processing
   last_updated: '2024-03-02'
@@ -155,7 +155,7 @@ items:
   - name: SamGartrell
     profile: https://github.com/SamGartrell
   description: Tools for georeferencing and preliminary ID using the iNaturalist CV
-    model.
+    model
   source_code: https://github.com/SamGartrell/inat-upload-utils
   category: Utilities and data processing
   last_updated: '2025-03-28'
@@ -164,7 +164,7 @@ items:
   authors:
   - name: unaschneck
     profile: https://github.com/unaschneck
-  description: Push notification service for new observations or identifications.
+  description: Push notification service for new observations or identifications
   source_code: https://github.com/unaschneck/intaturalist-push-notifications
   category: Utilities and data processing
   last_updated: '2025-04-25'
@@ -173,14 +173,14 @@ items:
   authors:
   - name: Kildor
     profile: https://github.com/kildor
-  description: Various tools and scripts for interacting with iNaturalist data.
+  description: Various tools and scripts for interacting with iNaturalist data
   category: Utilities and data processing
 - title: iNat Trails
   url: https://github.com/joergmlpts/iNat-trails
   authors:
   - name: joergmlpts
     profile: https://github.com/joergmlpts
-  description: Generates a table of iNaturalist observations along a hike route.
+  description: Generates a table of iNaturalist observations along a hike route
   source_code: https://github.com/joergmlpts/iNat-trails
   category: Utilities and data processing
   last_updated: '2024-07-22'
@@ -190,21 +190,21 @@ items:
   - name: kaldari
     profile: https://github.com/kaldari
   description: User script to import free-license images from iNaturalist to Wikimedia
-    Commons.
+    Commons
   source_code: https://github.com/kaldari/iNaturalist2Commons
   category: Utilities and data processing
   last_updated: '2024-10-12'
 - title: Field Notes
   url: https://ifieldnotes.org/
   authors: []
-  description: A website for writing field notes to accompany iNaturalist observations.
+  description: A website for writing field notes to accompany iNaturalist observations
   category: Other
 - title: Wild Orchid Watch
   url: https://app.wildorchidwatch.org/
   authors:
   - name: ternandsparrow
     profile: https://github.com/ternandsparrow
-  description: A progressive web app for the Wild Orchid Watch project.
+  description: A progressive web app for the Wild Orchid Watch project
   source_code: https://github.com/ternandsparrow/wild-orchid-watch-pwa
   category: Other
   last_updated: '2022-09-15'
@@ -214,7 +214,7 @@ items:
   - name: mjon
     profile: https://github.com/mjon
   description: Encourages systematic monitoring using iNaturalist. Lets you explore
-    trends and patterns over time.
+    trends and patterns over time
   source_code: https://github.com/mjon/WildCounts
   category: Other
   last_updated: '2024-08-12'
