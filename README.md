@@ -58,6 +58,7 @@ Generally helpful things such as tools to assist the generation, processing or a
  * [iNaturalist Push Notifications](https://github.com/unaschneck/intaturalist-push-notifications) by [unaschneck](https://github.com/unaschneck) – Push notification service for new observations or identifications. [Source code](https://github.com/unaschneck/intaturalist-push-notifications)
  * [Kildor's iNat Tools](https://kildor.name/inat/) by [Kildor](https://github.com/kildor) – Various tools and scripts for interacting with iNaturalist data.
  * [iNat Trails](https://github.com/joergmlpts/iNat-trails) by [joergmlpts](https://github.com/joergmlpts) – This utility reads the route of a hike and generates a table of iNaturalist observations along the way. [Source code](https://github.com/joergmlpts/iNat-trails)
+ * [iNaturalist2Commons](https://commons.wikimedia.org/wiki/User:Kaldari/iNaturalist2Commons) by [kaldari](https://github.com/kaldari) - A Wikimedia Commons user script that lets you import free-license images from iNaturalist to Commons. [Source code](https://github.com/kaldari/iNaturalist2Commons)
 
 ### Other
 
