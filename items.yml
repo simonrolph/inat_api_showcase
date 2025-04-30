@@ -1,0 +1,215 @@
+items:
+  - title: Learn the Land
+    url: https://learnthe.land/
+    authors:
+      - name: Corey Farwell
+        profile: https://github.com/frewsxcv
+    description: Flashcard web app for naturalists powered by iNaturalist. You are shown an image of a species and then can reveal the identification. Configurable to regions and iconic taxa.
+    source_code: https://github.com/frewsxcv/learnthe.land
+    category: Learning
+
+  - title: Identifi
+    url: https://identifi.life/
+    authors:
+      - name: Meltknuckles
+        profile: https://bsky.app/profile/meltknuckles.bsky.social
+    description: An identification practice tool for wildlife. Challenge yourself to identify the things found in nature, and take a guess from the kingdom down to the species.
+    category: Learning
+
+  - title: iNatGuessr
+    url: https://simonrolph.github.io/iNatGuessr/
+    authors:
+      - name: Simon Rolph
+        profile: https://github.com/simonrolph
+    description: A Guessr-style game based on iNaturalist images. Guess where they're from and reveal the location.
+    source_code: https://github.com/simonrolph/inatguessr
+    category: Games
+
+  - title: BioGuessr
+    url: https://www.bioguessr.com/
+    authors:
+      - name: jtklein
+    description: A quiz game showing a photo with four family name options.
+    category: Games
+
+  - title: Easily Missed
+    url: https://simonrolph.github.io/easily_missed/
+    authors:
+      - name: Simon Rolph
+        profile: https://github.com/simonrolph
+    description: Tool to help identify local gaps in species records and suggest what to observe.
+    source_code: https://github.com/simonrolph/easily_missed
+    category: Decision support tools
+
+  - title: Local Experts
+    url: https://simonrolph.github.io/inat_experts/
+    authors:
+      - name: Simon Rolph
+        profile: https://github.com/simonrolph
+    description: Finds local iNaturalist experts and gives you species recommendations.
+    source_code: https://github.com/simonrolph/inat_experts
+    category: Decision support tools
+
+  - title: Birds in Your Area
+    url: https://birds-in-your-area.up.railway.app/
+    authors:
+      - name: jmevangelist
+        profile: https://github.com/jmevangelist
+    description: Find bird species seen in a specified area using iNaturalist data.
+    source_code: https://github.com/jmevangelist/birds-in-your-area
+    category: Decision support tools
+
+  - title: Plan Your Expedition
+    url: https://shnayder.shinyapps.io/PlanYourExpedition/
+    authors:
+      - name: capsellabursa
+        profile: https://github.com/capsellabursa
+    description: A planning tool using iNaturalist data for field expeditions.
+    source_code: https://github.com/capsellabursa/PlanYourExpedition
+    category: Decision support tools
+
+  - title: Rarest Critter Webapp
+    url: null
+    authors:
+      - name: m3lmark
+        profile: https://github.com/m3lmark
+    description: A tool for finding rare species using iNaturalist data.
+    source_code: https://github.com/m3lmark/rarest_critter_webapp
+    category: Decision support tools
+
+  - title: Rocky Beaches
+    url: https://www.rockybeaches.com/
+    authors:
+      - name: Natalie Downe
+      - name: Simon Willison
+    description: Helps you find places to go tidepooling and figure out the best times.
+    source_code: https://github.com/natbat/rockybeaches
+    category: Decision support tools
+
+  - title: iNaturalist Live
+    url: https://simonrolph.github.io/inat_counter
+    authors:
+      - name: Simon Rolph
+        profile: https://github.com/simonrolph
+    description: Live visualisation of iNaturalist observations and identifications.
+    source_code: https://github.com/simonrolph/inatcounter
+    category: Exploring and data visualisation
+
+  - title: Nature Gram
+    url: https://jmevangelist.github.io/nature-gram
+    authors:
+      - name: jmevangelist
+        profile: https://github.com/jmevangelist
+    description: Endless scroll of iNaturalist observations.
+    source_code: https://github.com/jmevangelist/nature-gram
+    category: Exploring and data visualisation
+
+  - title: Owls Near Me
+    url: https://www.owlsnearme.com/
+    authors:
+      - name: Natalie Downe
+      - name: Simon Willison
+    description: A website that tells you where your nearest owls are!
+    source_code: https://github.com/simonw/owlsnearme
+    category: Exploring and data visualisation
+
+  - title: iNaturalist Enhancement Suite
+    url: https://chromewebstore.google.com/detail/inaturalist-enhancement-s/hdnjehcihcpjphgbkagjobenejgldnah
+    authors:
+      - name: Eric Johnson
+    description: Chrome extension that adds functionality to iNaturalist.
+    category: Utilities and data processing
+
+  - title: Dronefly
+    url: null
+    authors:
+      - name: iNaturalist Discord Community
+    description: A bot that gives users access to iNaturalist on Discord chat.
+    source_code: https://github.com/dronefly-garden/dronefly
+    category: Utilities and data processing
+
+  - title: Stir fry
+    url: https://github.com/jumear/stirfry
+    authors:
+      - name: Jumear
+        profile: https://github.com/jumear
+    description: Miscellaneous web-based tools for iNaturalist power users.
+    source_code: https://github.com/jumear/stirfry
+    category: Utilities and data processing
+
+  - title: LR iNaturalist Publish
+    url: https://github.com/rcloran/lr-inaturalist-publish
+    authors:
+      - name: rcloran
+        profile: https://github.com/rcloran
+    description: A Lightroom plugin to publish directly to iNaturalist.
+    source_code: https://github.com/rcloran/lr-inaturalist-publish
+    category: Utilities and data processing
+
+  - title: iNat Upload Utils
+    url: https://github.com/SamGartrell/inat-upload-utils
+    authors:
+      - name: SamGartrell
+        profile: https://github.com/SamGartrell
+    description: Tools for georeferencing and preliminary ID using the iNaturalist CV model.
+    source_code: https://github.com/SamGartrell/inat-upload-utils
+    category: Utilities and data processing
+
+  - title: iNaturalist Push Notifications
+    url: https://github.com/unaschneck/intaturalist-push-notifications
+    authors:
+      - name: unaschneck
+        profile: https://github.com/unaschneck
+    description: Push notification service for new observations or identifications.
+    source_code: https://github.com/unaschneck/intaturalist-push-notifications
+    category: Utilities and data processing
+
+  - title: Kildor's iNat Tools
+    url: https://kildor.name/inat/
+    authors:
+      - name: Kildor
+        profile: https://github.com/kildor
+    description: Various tools and scripts for interacting with iNaturalist data.
+    category: Utilities and data processing
+
+  - title: iNat Trails
+    url: https://github.com/joergmlpts/iNat-trails
+    authors:
+      - name: joergmlpts
+        profile: https://github.com/joergmlpts
+    description: Generates a table of iNaturalist observations along a hike route.
+    source_code: https://github.com/joergmlpts/iNat-trails
+    category: Utilities and data processing
+
+  - title: iNaturalist2Commons
+    url: https://commons.wikimedia.org/wiki/User:Kaldari/iNaturalist2Commons
+    authors:
+      - name: kaldari
+        profile: https://github.com/kaldari
+    description: User script to import free-license images from iNaturalist to Wikimedia Commons.
+    source_code: https://github.com/kaldari/iNaturalist2Commons
+    category: Utilities and data processing
+
+  - title: Field Notes
+    url: https://ifieldnotes.org/
+    authors: []
+    description: A website for writing field notes to accompany iNaturalist observations.
+    category: Other
+
+  - title: Wild Orchid Watch
+    url: https://app.wildorchidwatch.org/
+    authors:
+      - name: ternandsparrow
+        profile: https://github.com/ternandsparrow
+    description: A progressive web app for the Wild Orchid Watch project.
+    source_code: https://github.com/ternandsparrow/wild-orchid-watch-pwa
+    category: Other
+
+  - title: WildCounts
+    url: https://wildcounts.org/
+    authors:
+      - name: mjon
+        profile: https://github.com/mjon
+    description: Encourages systematic monitoring using iNaturalist. Lets you explore trends and patterns over time.
+    source_code: https://github.com/mjon/WildCounts
+    category: Other
