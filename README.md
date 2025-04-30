@@ -36,6 +36,7 @@ Tools to assist decision-making processes such as where to go, what to record or
  * [Birds in Your Area](https://birds-in-your-area.up.railway.app/) by [jmevangelist](https://github.com/jmevangelist) – Find bird species seen in a specified area using iNaturalist data. [Source code](https://github.com/jmevangelist/birds-in-your-area)
  * [Plan Your Expedition](https://shnayder.shinyapps.io/PlanYourExpedition/) by [capsellabursa](https://github.com/capsellabursa) – A planning tool using iNaturalist data for field expeditions. [Source code](https://github.com/capsellabursa/PlanYourExpedition)
  * Rarest Critter Webapp by [m3lmark](https://github.com/m3lmark) – A tool for finding rare species using iNaturalist data. [Source code](https://github.com/m3lmark/rarest_critter_webapp)
+ * [Rocky Beaches](https://www.rockybeaches.com/) by Natalie Downe and Simon Willison - helps you find places to go tidepooling, and figure out the best times to go. [Source code](https://github.com/natbat/rockybeaches)
 
 ### Exploring and data visualistion
 
@@ -43,6 +44,7 @@ New and interesting ways to experience the iNaturalist data
 
  * [iNaturalist Live](https://simonrolph.github.io/inat_counter) by [Simon Rolph](https://github.com/simonrolph) - Live visualisation of iNaturalist observations and identifications. [Source code](https://github.com/simonrolph/inatcounter)
  * [Nature Gram](https://jmevangelist.github.io/nature-gram) by [jmevangelist](https://github.com/jmevangelist) - Endless scroll of inaturalist observations. [Source code](https://github.com/jmevangelist/nature-gram)
+ * [Owls Near Me](https://www.owlsnearme.com/) by Natalie Downe and Simon Willison - A website that tells you where your nearest owls are! [Source code](https://github.com/simonw/owlsnearme)
 
 ### Utilities and data processing
 
