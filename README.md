@@ -1,12 +1,16 @@
-# iNaturalist API Showcase
+# iNaturalist Toolbox
 
 A collection of things made with the iNaturalist API.
 
-## The iNaturalist API
+## Using the iNaturalist API
 
  * The iNaturalist API documentation: https://api.inaturalist.org/v1/docs/
  * API recommended practices: https://www.inaturalist.org/pages/api+recommended+practices
  * Developer guidance: https://www.inaturalist.org/pages/developers
+ * You can interact with the API using these packages in:
+   * Python: [pyinaturalist](https://pyinaturalist.readthedocs.io/en/stable/)
+   * R: [rinat](https://github.com/ropensci/rinat)
+
 
 ## Showcase
 
@@ -39,6 +43,8 @@ Tools to assist decision-making processes such as where to go, what to record or
  * [Rarest Critter Webapp](https://github.com/m3lmark/rarest_critter_webapp) by [m3lmark](https://github.com/m3lmark) – A tool for finding rare species using iNaturalist data.
 
 ### Exploring and data visualistion
+
+New and interesting ways to experience the iNaturalist data
 
  * [iNaturalist Live](https://github.com/simonrolph/inatcounter) by [Simon Rolph
 ](https://github.com/simonrolph) - Live visualisation of iNaturalist observations and identifications. [Source code](https://github.com/simonrolph/inatcounter)
