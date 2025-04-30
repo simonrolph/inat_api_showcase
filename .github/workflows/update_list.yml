@@ -109,6 +109,75 @@ jobs:
               f.write(markdown)
           EOF
 
+
+      - name: Generate HTML page for GitHub Pages
+        run: |
+          python3 <<EOF
+          import yaml
+
+          with open('items.yml', 'r') as file:
+              data = yaml.safe_load(file)
+
+          def generate_table(items):
+              html = """
+              <table border="1" cellspacing="0" cellpadding="10">
+                  <thead>
+                      <tr>
+                          <th>Title</th>
+                          <th>Authors</th>
+                          <th>Description</th>
+                          <th>Source Code</th>
+                          <th>Last Updated</th>
+                          <th>Category</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+          """
+          
+              for item in items:
+                  title = item.get('title', 'Untitled')
+                  url = item.get('url', '#')
+                  authors = item.get('authors', [])
+                  author_links = ', '.join([
+                      f"<a href='{a['profile']}'>{a['name']}</a>" if 'profile' in a else a['name']
+                      for a in authors
+                  ])
+                  description = item.get('description', '').strip()
+                  source_code = item.get('source_code', '#')
+                  last_updated = item.get('last_updated', 'N/A')
+                  category = item.get('category', 'Uncategorized')
+    
+                  # Construct each row for the table
+                  html += f"""
+                  <tr>
+                      <td><a href="{url}">{title}</a></td>
+                      <td>{author_links}</td>
+                      <td>{description}</td>
+                      <td><a href="{source_code}">Source code</a></td>
+                      <td>{last_updated}</td>
+                      <td>{category}</td>
+                  </tr>
+              """
+                        html += """
+                  </tbody>
+              </table>
+              """
+
+          # Read the template file
+          with open('html_template.html', 'r') as f:
+              html_template = f.read()
+
+          # Generate table rows from items data
+          table = generate_table(data['items'])
+
+          # Insert table rows into the template
+          html_content = html_template.replace('<!-- Table content will be inserted here -->', table)
+
+          # Save the final HTML content to index.html
+          with open('index.html', 'w') as f:
+              f.write(html_content)
+          EOF   
+
       - name: Commit changes
         run: |
           git config --global user.name "GitHub Actions"
