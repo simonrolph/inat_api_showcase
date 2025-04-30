@@ -39,24 +39,28 @@ jobs:
                   markdown += f"### {category}\n\n"
                   for entry in entries:
                       title = entry.get('title', 'Untitled')
-                      authors = ', '.join([a['name'] for a in entry.get('authors', [])])
                       url = entry.get('url', '#')
-                      markdown += f"#### {title} by {authors}\n"
-                      markdown += f"- [Link]({url})\n"
-                      if 'description' in entry:
-                          markdown += f"  *{entry['description']}*\n"
-                      if 'source_code' in entry:
-                          markdown += f"  [Source code]({entry['source_code']})\n"
-                      if 'tags' in entry:
-                          markdown += f"  *Tags*: {', '.join(entry['tags'])}\n"
-                      markdown += "\n"
+                      authors = entry.get('authors', [])
+                      author_links = ', '.join([
+                          f"[{a['name']}]({a['profile']})" if 'profile' in a else a['name']
+                          for a in authors
+                      ])
+                      description = entry.get('description', '').strip()
+                      source_code = entry.get('source_code')
+
+                      line = f"* [{title}]({url}) by {author_links}"
+                      if description:
+                          line += f" - {description}"
+                      if source_code:
+                          line += f". [Source code]({source_code})"
+                      markdown += line + "\n"
+                  markdown += "\n"
               return markdown
 
-          # Generate and write the markdown
           markdown = convert_flat_items_to_markdown(data['items'])
 
-          with open('list_of_items.md', 'w') as readme_file:
-              readme_file.write(markdown)
+          with open('list_of_items.md', 'w') as f:
+              f.write(markdown)
           EOF
 
       - name: Commit updated list_of_items.md
