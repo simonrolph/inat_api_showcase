@@ -1,29 +1,72 @@
-name: Update list_of_items.md from YAML
+name: Update list_of_items.md and last_updated timestamps
 
 on:
   workflow_dispatch:
 
 jobs:
-  update-readme:
+  update-files:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y python3-pip
-          pip3 install pyyaml
+          pip3 install pyyaml requests
 
-      - name: Generate markdown file
+      - name: Update last_updated timestamps in items.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 <<EOF
+          import yaml
+          import requests
+          from urllib.parse import urlparse
+          import os
+
+          headers = {
+              "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
+              "Accept": "application/vnd.github.v3+json"
+          }
+
+          def get_last_commit_date(repo_url):
+              try:
+                  parsed = urlparse(repo_url)
+                  path = parsed.path.strip('/')
+                  if path.endswith('.git'):
+                      path = path[:-4]
+                  api_url = f"https://api.github.com/repos/{path}/commits"
+                  response = requests.get(api_url, headers=headers)
+                  if response.status_code == 200:
+                      commit_data = response.json()
+                      return commit_data[0]['commit']['committer']['date'][:10]
+              except Exception as e:
+                  print(f"Failed to get update date for {repo_url}: {e}")
+              return None
+
+          with open("items.yml", "r") as f:
+              data = yaml.safe_load(f)
+
+          for item in data['items']:
+              repo_url = item.get('source_code')
+              if repo_url and 'github.com' in repo_url:
+                  date = get_last_commit_date(repo_url)
+                  if date:
+                      item['last_updated'] = date
+
+          with open("items.yml", "w") as f:
+              yaml.dump(data, f, sort_keys=False)
+          EOF
+
+      - name: Generate list_of_items.md from items.yml
         run: |
           python3 <<EOF
           import yaml
           from collections import defaultdict
 
-          # Load the YAML data from the file
           with open('items.yml', 'r') as file:
               data = yaml.safe_load(file)
 
@@ -47,12 +90,15 @@ jobs:
                       ])
                       description = entry.get('description', '').strip()
                       source_code = entry.get('source_code')
+                      last_updated = entry.get('last_updated')
 
                       line = f"* [{title}]({url}) by {author_links}"
                       if description:
                           line += f" - {description}"
                       if source_code:
                           line += f". [Source code]({source_code})"
+                      if last_updated:
+                          line += f" _(Last updated: {last_updated})_"
                       markdown += line + "\n"
                   markdown += "\n"
               return markdown
@@ -63,10 +109,10 @@ jobs:
               f.write(markdown)
           EOF
 
-      - name: Commit updated list_of_items.md
+      - name: Commit changes
         run: |
-          git config --global user.email "action@github.com"
           git config --global user.name "GitHub Actions"
-          git add list_of_items.md
-          git commit -m "Update list_of_items.md from YAML data" || echo "No changes to commit"
+          git config --global user.email "actions@github.com"
+          git add items.yml list_of_items.md
+          git commit -m "Update items.yml and list_of_items.md with latest timestamps" || echo "No changes"
           git push
