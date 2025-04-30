@@ -1,0 +1,66 @@
+name: Update README from YAML
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Install dependencies (YAML parser and markdown generation tools)
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip3 install pyyaml
+
+      # Add a Python script to convert the YAML to Markdown
+      - name: Generate README
+        run: |
+          python3 <<EOF
+          import yaml
+          import os
+
+          # Load the YAML data from the file
+          with open('data.yml', 'r') as file:
+              data = yaml.safe_load(file)
+
+          # Function to convert YAML to markdown format
+          def create_markdown_entry(item):
+              markdown = f"### {item['category']}\n\n"
+              for entry in item['items']:
+                  markdown += f"#### {entry['title']} by {', '.join([author['name'] for author in entry['authors']])}\n"
+                  markdown += f"- [Link]({entry['url']})\n"
+                  if 'description' in entry:
+                      markdown += f"  *{entry['description']}*\n"
+                  markdown += f"  [Source code]({entry['source_code']})\n"
+                  if 'tags' in entry:
+                      markdown += f"  *Tags*: {', '.join(entry['tags'])}\n\n"
+              return markdown
+
+          # Starting markdown content
+          readme_content = "# Toolbox\n\n"
+
+          # Iterate through the categories and items
+          for category in data['items']:
+              readme_content += create_markdown_entry(category)
+
+          # Write the generated markdown to README.md
+          with open('LIST.md', 'w') as readme_file:
+              readme_file.write(readme_content)
+
+          EOF
+
+      # Commit and push the updated README.md
+      - name: Commit updated LIST
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Actions"
+          git add README.md
+          git commit -m "Update README.md from YAML data"
+          git push
