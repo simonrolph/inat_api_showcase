@@ -176,7 +176,7 @@ jobs:
           # Save the final HTML content to index.html
           with open('index.html', 'w') as f:
               f.write(html_content)
-          EOF   
+          EOF
 
       - name: Commit changes
         run: |
