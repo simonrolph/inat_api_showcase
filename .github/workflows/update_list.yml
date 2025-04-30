@@ -187,3 +187,7 @@ jobs:
           git add items.yml list_of_items.md index.html
           git commit -m "Update items.yml and list_of_items.md with latest timestamps" || echo "No changes"
           git push
+
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5.0.0
